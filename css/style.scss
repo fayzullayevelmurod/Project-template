@@ -82,16 +82,6 @@ address {
 .wrapper {
     width: 100%;
     overflow: hidden;
-    position: relative;
-}
-.wrapper.home .main_container {
-    max-width: 1440px;
-    padding: 0 40px;
-}
-
-.container_wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
 }
 
 h1,
@@ -112,4 +102,5 @@ label {
 .main_container {
     max-width: 1380px;
     padding: 0 10px;
+    margin: 0 auto;
 }
