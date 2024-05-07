@@ -26,7 +26,7 @@
 }
 
 @mixin transition {
-    transition: .2s ease;
+    transition: .3s ease;
 }
 // mixin
 
@@ -38,13 +38,9 @@
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none;
     color: inherit;
     display: inline-block;
-}
-
-a:hover {
-    color: inherit;
 }
 
 img {
@@ -72,7 +68,7 @@ button {
     border: none;
     cursor: pointer;
     background: transparent;
-    outline: 0 !important;
+    outline: 0;
 }
 
 address {
@@ -84,6 +80,13 @@ address {
     overflow: hidden;
 }
 
+.main_container {
+    max-width: 1380px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+// bootstrap
 h1,
 h2,
 h3,
@@ -98,9 +101,6 @@ label {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+// bootstrap
 
-.main_container {
-    max-width: 1380px;
-    padding: 0 10px;
-    margin: 0 auto;
-}
+@import './responsive';
