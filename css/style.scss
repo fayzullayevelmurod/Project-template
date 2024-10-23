@@ -95,10 +95,13 @@ address {
     overflow: hidden;
 }
 
-.main_container {
-    max-width: 1380px;
-    padding: 0 10px;
+.container {
+    max-width: 1312px;
     margin: 0 auto;
+
+    // @include media(1300px) {
+    //     max-width: calc(100% - 112px);
+    // }
 }
 
 // bootstrap
