@@ -1,3 +1,16 @@
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
+
 // mixin
 @mixin flex-full-center {
     display: flex;
@@ -60,8 +73,10 @@ body {
     font-style: normal;
 }
 
-input {
+input, textarea {
     outline: none;
+    border: 0;
+    background: transparent;
 }
 
 button {
@@ -95,6 +110,8 @@ h5,
 h6,
 p,
 ul,
+ol,
+dl,
 label {
     padding: 0;
     margin: 0;
