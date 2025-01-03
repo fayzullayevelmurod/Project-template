@@ -1,18 +1,23 @@
-$desktop-1400: 1400px;
-$desktop-1300: 1300px;
-$desktop-1200: 1200px;
-$desktop-1024: 1024px;
+@mixin media($breakpoint) {
+  $breakpoints: (
+    "xs": 480px,
+    "sm": 640px,
+    "md": 768px,
+    "lg": 1024px,
+    "xl": 1280px,
+    "2xl": 1536px
+  );
 
-$tablet-993: 993px;
-$tablet-768: 768px;
-
-$mobile-576: 576px;
-$mobile-480: 480px;
-$mobile-380: 380px;
-
-@mixin desktop-1400 {
-  @media (max-width: $desktop-1400) {
-    @content;
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: `#{$breakpoint}`. Use one of the following: #{map-keys($breakpoints)}.";
   }
 }
 
+// режим работы
+// @include media("lg") {
+//   padding: 10px;
+// }

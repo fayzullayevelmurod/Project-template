@@ -55,12 +55,12 @@ address {
   max-width: calc(1337px);
   margin: 0 auto;
 
+  @include media('lg') {
+    padding: 0 20px;
+  }
+
 }
 
 .section-top {
   margin-top: 160px;
-
-  @include desktop-1024 {
-    margin-top: 80px;
-  }
 }
